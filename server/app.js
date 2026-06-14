@@ -35,10 +35,7 @@ const MODEL = 'gemini-1.5-flash';
 const thaiFontPath = path.join(__dirname, 'assets', 'fonts', 'NotoSerifThai-Regular.ttf');
 
 // pdf.js ต้องชี้ standard fonts เป็น file:// URL
-const standardFontDataUrl = new URL(
-  'node_modules/pdfjs-dist/standard_fonts/',
-  import.meta.url
-).href;
+const standardFontDataUrl = 'file://' + path.join(__dirname, 'node_modules/pdfjs-dist/standard_fonts/');
 
 // ===== Helpers =====
 function chunkText(s, maxLen = 4000) {
